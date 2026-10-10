@@ -19,7 +19,7 @@ Requirements:
 
 Run `build_final.cmd` from any terminal, or use the VS Code task **Build FXCalculator standalone app**. The executable and bundled runtime are created in `dist\FXCalculator`.
 
-To publish a downloadable ZIP release, push a version tag such as `v1.0.0`. GitHub Actions builds the standalone app and attaches `FXCalculator-windows-x64.zip` to that release automatically.
+To publish a downloadable ZIP release, push a version tag such as `v1.0.1`. GitHub Actions builds the standalone app and attaches `FXCalculator-windows-x64.zip` to that release automatically.
 
 ## Project files
 

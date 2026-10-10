@@ -2,7 +2,7 @@
 setlocal
 
 set "APP_NAME=FXCalculator"
-set "APP_VERSION=1.0.0"
+set "APP_VERSION=1.0.1"
 set "APP_MAIN_CLASS=FXCalculator"
 set "APP_LIB_DIR=lib"
 set "APP_OUTPUT_DIR=dist"
@@ -98,9 +98,15 @@ if errorlevel 1 (
     echo ERROR: Could not replace the previous application image at "%APP_IMAGE%".
     goto build_failed
 )
-move "%APP_WORK_DIR%\output\%APP_NAME%" "%APP_IMAGE%" >nul
+xcopy /E /I /Y "%APP_WORK_DIR%\output\%APP_NAME%" "%APP_IMAGE%" >nul
 if errorlevel 1 (
-    echo ERROR: Could not place the application image at "%APP_IMAGE%".
+    echo ERROR: Could not copy the application image to "%APP_IMAGE%".
+    if exist "%APP_IMAGE%" rmdir /s /q "%APP_IMAGE%"
+    goto build_failed
+)
+if not exist "%APP_IMAGE%\%APP_NAME%.exe" (
+    echo ERROR: The application executable is missing from "%APP_IMAGE%".
+    if exist "%APP_IMAGE%" rmdir /s /q "%APP_IMAGE%"
     goto build_failed
 )
 
