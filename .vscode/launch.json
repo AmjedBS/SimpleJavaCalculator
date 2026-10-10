@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "EngineTest",
+            "request": "launch",
+            "mainClass": "EngineTest",
+            "projectName": "calculatrice_e5eb6879"
+        },
+        {
+            "type": "java",
+            "name": "Run FXCalculator",
+            "request": "launch",
+            "mainClass": "FXCalculator",
+            "vmArgs": "--module-path \"C:\\Users\\Dev\\Desktop\\JAVA\\javafx-sdk-21.0.12\\lib\" --add-modules javafx.controls,javafx.fxml"
+        }
+    ]
+}

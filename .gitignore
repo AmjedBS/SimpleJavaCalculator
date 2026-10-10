@@ -1,0 +1,10 @@
+# Generated builds
+/dist/
+/out/
+*.class
+/FXCalculator.jar
+/nul
+
+# JavaFX packaging files downloaded by the build workflow
+/lib/fx-jmods-21.0.12.zip
+/lib/javafx-jmods-21.0.12/

@@ -1,0 +1,21 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build FXCalculator standalone app",
+			"type": "process",
+			"command": "${env:ComSpec}",
+			"args": [
+				"/d",
+				"/c",
+				"${workspaceFolder}\\build_final.cmd"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		}
+	]
+}
