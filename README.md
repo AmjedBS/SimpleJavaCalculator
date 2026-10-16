@@ -25,5 +25,12 @@ To publish a downloadable ZIP release, push a version tag such as `v1.0.1`. GitH
 
 - `FXCalculator.java` — JavaFX user interface and application entry point
 - `CalculatorEngine.java` — calculator expression engine used by the UI
-- `EngineTest.java` — console-based engine diagnostics
+- `EngineTest.java` — dependency-free console tests for the calculator engine
 - `build_final.cmd` — builds the standalone Windows application image
+
+Run the engine tests with a JDK:
+
+```text
+javac CalculatorEngine.java EngineTest.java
+java EngineTest
+```
